@@ -1,8 +1,17 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/'],
-  collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.ts(x)'],
+  roots: ['<rootDir>/src/'],
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest', // Transform TypeScript files using ts-jest
+  },
+  coverageDirectory: '<rootDir>/coverage/',
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{ts,tsx}',
+    '!**/__mocks__/**',
+    '!**/node_modules/**',
+    '!**/*.d.ts',
+  ],
   setupFilesAfterEnv: ['<rootDir>/setupTest.ts'],
-  modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
+  verbose: true,
+  testTimeout: 30000,
 };
