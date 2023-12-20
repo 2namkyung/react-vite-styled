@@ -27,7 +27,6 @@
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.7",
     "babel-plugin-transform-vite-meta-env": "^1.0.3",
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -43,7 +42,6 @@
     "jest-environment-jsdom": "^29.5.0",
     "jest-junit": "^16.0.0",
     "lint-staged": "^13.0.3",
-    "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "ts-jest": "^29.1.0",
     "typescript": "^4.9.3",
@@ -55,5 +53,8 @@
       "eslint --fix",
       "prettier --write"
     ]
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
