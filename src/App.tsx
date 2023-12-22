@@ -1,12 +1,13 @@
-import styled from 'styled-components';
-
-const Container = styled.div`
-  width: 80vw;
-  margin: 0 auto;
-`;
+import { Provider } from 'react-redux';
+import { setupStore } from './store';
+import Router from './router';
 
 function App() {
-  return <Container>App</Container>;
+  return (
+    <Provider store={setupStore()}>
+      <Router />
+    </Provider>
+  );
 }
 
 export default App;
